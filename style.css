@@ -1,0 +1,136 @@
+
+        /* #2 #colorful #palette is:
+          * Background: #F5F5F5 (GREY 100)
+          * Primary Text: black
+
+          * Primary color: #3F51B5 (INDIGO)
+          * Primary color_text : white
+          * Accent color: #CDDC39 (LIME)
+          * Accent color_text: black
+          */
+/* Global */
+        /*global styles */
+* {
+ /* #2 #font #faces */
+font-family: 'Roboto', sans-serif;
+margin: 0px;
+padding: 0px;
+}
+
+body {
+/* #2 #colorful #background */
+ background-color: #F5F5F5;
+}
+
+h1 {
+ /* #2 #colourful #app-bar */
+background-color: #3F51B5;
+color: white;
+}
+
+button a:link {
+/* #2 #colourful #plusfive */
+background-color: #CDDC39;
+color: black;
+/* #2 #font capital #letters */
+text-transform: uppercase;
+}
+/* App bar */
+h1 a strong{
+    color:white;
+    text-transform: uppercase;
+}
+/* Channels list */
+ /*styles for channel area*/
+li {
+    /* #2 #colorful #channelandchat */
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding:16px;
+    font-size: 16px;
+    height: 56px;
+    box-sizing: border-box;
+}
+li.selectedChannel{
+    /* highlight the color and left border of the currently selected channel using primary color, as you did previously in the tab bar. */
+    border-style: solid;
+    border-width: 0px 0px 0px 4px;
+    border-color: #3F51B5;
+}
+li img{
+    /* align the icons with the text */
+    vertical-align: text-top;
+}
+/* Tab bar */
+
+#tab-bar button{
+    /* style for tab bar buttons */
+    width: 32.33%;
+    height: 72px;
+    padding:16px;
+    text-transform: uppercase;
+    text-align: center;background-color: white;
+    border: none;
+    font-size: 13px;
+    block-size: 100%;
+    box-sizing: border-box;
+}
+#tab-bar button img {
+    /* style for tab images */
+    display: block;
+    margin: 4px auto;
+}
+#tab-bar button.selected {
+    /* style for tab bar button selected */
+    border-style: solid ;
+    border-width: 0px 0px 4px 0px;
+    border-color: #3F51B5;
+}
+/* Messages */
+.message {
+    /*styles for chat area*/
+     /* Make these containers use 80% of the browser’s width */
+        width:80%;
+        margin-bottom: 8px;
+        margin: 8px 0px 0px 2.5%;
+}
+.message.own {
+    /* style for own class */
+    margin: 0px 0px 8px 17.5%; 
+}
+.message p {
+    /* #2 #colorful #channelandchat */
+    background-color: white;
+    display:block;
+    padding: 16px;
+}
+
+.message strong {
+    /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
+    text-transform: uppercase;
+}
+
+.message h3 {
+    /* #2 #font #metadata is now medium */
+    font-size: medium;
+}
+
+.message em {
+    /* #2 #font #remaining overrides the default italic appearance of em elements*/
+    font-size: larger;
+    font-style: normal;
+}
+.message a:link {
+    /* change the preset link color to black text color */
+    color: black; 
+}
+.message h1 a:link {
+    /* change the preset link color to white text color */
+    color: white;
+}
+.message button{
+    /* style buttons */
+    background-color: #CDDC39;
+    color: black;
+    text-transform: uppercase;
+}
