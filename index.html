@@ -8,124 +8,79 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-
-    </style>
-
+    <!--  external css file -->
+    <link rel="stylesheet" href="style.css">
+     <!--  external Roboto css file -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-
+<!--Insert Moocus (moocus.png) into the app bar above the channel area -->
+<img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="a very talkative duck" style="height:56px;">
 <!-- channel area -->
 <!-- #1 #channels #app-bar -->
-<h1>chatter|app</h1>
+
+    <h1>chatter|app</h1>
+
 
 <!-- #1 #channels #topics -->
-<h2>#Yummy</h2>
-<h2>#SevenContinents</h2>
-<h2>#KillerApp</h2>
-<h2>#FirstPersonOnMars</h2>
-<h2>#Octoberfest</h2>
+<!-- channels reworked as a list -->
+<ul style="list-style-type: none; background-color: white;">
+<li>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="filled star" style="height:20px;"></li>
 
+<li class="selectedChannel">#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="empty star" style="height:20px;"></li>
+
+<li>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="filled star" style="height:20px;"></li>
+
+<li>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="empty star" style="height:20px;"></li>
+
+<li>#Octoberfest<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="empty star" style="height:20px;"></li>
+
+</ul>
 <!-- #1 #channels #buttons -->
-<button>new</button>
-<button>trending</button>
-<button>favorites</button>
-
+<!-- Insert images from the image pack before each button’s text + white background for container -->
+<!-- assign id for the tab bar -->
+<div id="tab-bar" style="background-color: white;">
+<button class="selected"><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb" style="height:20px;">new</button>
+<button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire image" style="height:20px;">trending</button>
+<button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="filled star" style="height:20px;">favorites</button>
+</div>
 
 <!-- chat area -->
 <!-- #1 #chat #name -->
+
 <h1>#SevenContinents
     <!-- #1 #chat #location is wrapped in small tag-->
     <small>by
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-        <strong>cheeses.yard.applies</strong>
+       <a href="https://w3w.co/cheeses.yard.applies" target="_blank"><strong>cheeses.yard.applies</strong></a><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="filled star" style="margin-left:5px; height:20px;">
     </small>
 </h1>
 
+
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+<div class="message own">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>cheeses.yard.applies</strong>
+    <!-- Connect all the messages’ creator locations (e.g., cheeses.yard.applies) with the w3w service. -->
+    <a href="https://w3w.co/cheeses.yard.applies" target="_blank"><strong>cheeses.yard.applies</strong></a>
     Wed, June 20th, 13:37
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>15 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
+
 <p>What's the place you folks call home?</p>
+
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+<div class="message">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>truck.cotton.zone</strong>
+    <a href="https://w3w.co/truck.cotton.zone" target="_blank"><strong>truck.cotton.zone</strong></a>
     Wed, June 20th, 13:39
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>4 min. left</em>
@@ -134,24 +89,29 @@
 <p>BRISBANE! Hang loose!</p>
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+<div class="message">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>thus.best.dishes</strong>
+    <a href="https://w3w.co/thus.best.dishes" target="_blank"><strong>thus.best.dishes</strong></a>
     Wed, June 20th, 14:02
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>12 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
 <p>The big apple.</p>
+
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+<div class="message">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>driveway.helper.magazine</strong>
+    <a href="https://w3w.co/driveway.helper.magazine" target="_blank"><strong>driveway.helper.magazine</strong></a>
     Wed, June 20th, 14:02
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>7 min. left</em>
@@ -160,11 +120,13 @@
 <p>Eu sou um Carocas.</p>
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
+<div class="message">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>escapes.pitch.saucepan</strong>
+    <a href="https://w3w.co/escapes.pitch.saucepan" target="_blank"><strong>escapes.pitch.saucepan</strong></a>
     Wed, June 20th, 14:07
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>14 min. left</em>
@@ -173,11 +135,13 @@
 <p>Greetings from the western cape!</p>
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
+<div class="message">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
-    <strong>meanings.identity.pays</strong>
+    <a href="https://w3w.co/meanings.identity.pays" target="_blank"><strong>meanings.identity.pays</strong></a>
     Wed, June 20th, 04:08
     <!-- #1 #chat #ttl lives inside the metadata -->
     <em>15 min. left</em>
@@ -186,6 +150,7 @@
 <p>北京</p>
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
+</div>
 
 </body>
 </html>
